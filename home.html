@@ -1,0 +1,43 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notification Feed</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Noti-Block</h1>
+
+        <div id="notification-form">
+            <label for="notification-content">Notification Content:</label>
+            <input type="text" id="notification-content" placeholder="Enter notification content">
+            <button id="add-notification-btn">Add Notification</button>
+        </div>
+
+        <div id="notification-details-form">
+            <label for="notification-id">Notification ID:</label>
+            <input type="number" id="notification-id" placeholder="Enter notification ID">
+            <button id="get-notification-btn">Get Notification Details</button>
+        </div>
+
+        <div id="transfer-owner-form">
+            <label for="new-owner">New Owner Address:</label>
+            <input type="text" id="new-owner" placeholder="Enter new owner address">
+            <button id="transfer-ownership-btn">Transfer Ownership</button>
+        </div>
+
+        <div id="notifications"></div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/web3@1.3.0/dist/web3.min.js"></script>
+    <script src="sc.js"></script>
+    <script>
+        document.getElementById('add-notification-btn').addEventListener('click', addNotification);
+        document.getElementById('get-notification-btn').addEventListener('click', getNotification);
+        document.getElementById('transfer-ownership-btn').addEventListener('click', transferOwnership);
+    </script>
+</body>
+</html>
